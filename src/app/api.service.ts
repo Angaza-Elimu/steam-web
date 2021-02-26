@@ -27,8 +27,8 @@ export class ApiService {
       password: password
     }
 
-    
-    return this.http.post(this.api_url + 'api/auth/login', data)
+
+    return this.http.post(this.api_url + '/api/auth/login', data)
       .pipe(retry(1),
         catchError(this.handleError)
       );
@@ -38,8 +38,16 @@ export class ApiService {
 
   }
 
-  getSubtopics() {
+  getSteamTopics(){
+    return this.http.get(this.api_url + "/api/steamTopics");
+  }
 
+  getSteamSubtopics(){
+    
+  }
+
+  getSubtopics() {
+    return this.http.post(this.api_url + 'api/')
   }
 
 
