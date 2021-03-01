@@ -1,3 +1,101 @@
+
+
+<!-- <ngx-loading-bar color="#48a3dc" height="6px"></ngx-loading-bar> -->
+<div>
+  <nav id="navbar">
+    <div class="nav-wrapper" style="width:90%">
+      <div class="logo">
+        <a href="#home"><img src="../assets/images/logo.png" style="height:60px;margin-top: 10px;"/></a>
+      </div>
+      <button
+      class="menu-toggle"
+        (click)="responsiveMenu()"
+          style="background-color:#27AE60;border-radius:15px;margin-top:14px;"
+        >
+        <i class="fa fa-bars" aria-hidden="true" style="color:white;padding:20px;"></i>
+        </button>
+      <ul id="menu">
+        <li *ngIf="user_type == null || user_type == ''"><a  href="home" style="cursor: pointer;">Home</a></li>
+
+        <!-- <li *ngIf="user_type && user_type ==='admin'"><a  (click)="navigateUser('teacher')" style="cursor: pointer;">Admin Dashboard</a></li>
+        <li *ngIf="user_type && user_type ==='teacher'"><a  (click)="navigateUser('teacher')" style="cursor: pointer;">Teacher Dashboard</a></li>
+        <li *ngIf="user_type && user_type ==='parent'"><a  (click)="navigateUser()" style="cursor: pointer;">Parent Dashboard</a></li> -->
+        <!-- <li *ngIf="user_type"><a (click)="learnButtonClicked()" style="cursor: pointer;">Learn</a></li>
+        <li *ngIf="user_type"><a (click)="revisionButtonClicked()" style="cursor: pointer;">Revision</a></li>
+        <li><a (click)="steamButtonClicked()" *ngIf="user_type && user_type === 'student'" style="cursor:pointer">Steam</a></li>
+        <li *ngIf="user_type && user_type === 'student'"><a (click)="goToAnalytics()" style="cursor: pointer;">Analytics</a></li> -->
+        <li style="cursor: pointer;" (click)='goToAbout()'><a >About Us</a></li>
+        <!-- <li><a routerLink="blog">Blog</a></li> -->
+        <li><a routerLink="help">Help</a></li>
+        <li
+
+  *ngIf="login_status == false"style="background-color:#27AE60;border-radius:40px;cursor:pointer">
+      <a (click)="signInToggle()" style="height:58px;">Sign In</a>
+    </li>
+    <li
+
+  *ngIf="login_status == false"style="margin-left:20px;background-color:#27AE60;border-radius:40px;cursor:pointer">
+      <a (click)="goToSignupPage()" style="height:58px;">Register</a>
+    </li>
+    <li *ngIf="login_status == true" style="cursor: pointer;" (click)="openProfilePage()">
+    <p style="color:white">
+      <i style="color:white" class="fa fa-user-o" aria-hidden="true"></i>&nbsp;&nbsp;{{username}}</p>
+    </li>
+    <li>
+      <a *ngIf="login_status" data-toggle="modal" data-target="#myModal" style="cursor: pointer;"> Log Out</a>
+    </li>
+  </ul>
+    </div>
+  </nav>
+</div>
+<div id="overlay" *ngIf="sign_in_overlay == true">
+  <div class="login-card">
+    <button (click)="exitModal()" id = "x">
+      <i class="fa fa-times" aria-hidden="true" style="color:black"></i>
+  </button>
+    <form [formGroup]="login_form">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input type="text" class="form-control"  placeholder="Enter Username" formControlName="username">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+      </div>
+      <button
+      (click)="loginAttempt()"
+      style="background-color:#27AE60;border-radius:40px;float: right;margin-right: 20px;"
+    >
+      <p style="font-size:20px;color:white;margin:auto;padding:14px;font-weight:200 ">Log In</p>
+    </button>
+    </form>
+    <div class="row text-margin"><p>Forgot Password?&nbsp;&nbsp;</p> <a class="link" style="color:blue;text-decoration: underline;" (click)="passwordResetPage()">Click Here</a></div>
+  </div>
+</div>
+<div class="modal fade" id="myModal" style="padding:30px;">
+  <div class="modal-dialog modal-sm text-center" style="margin:auto">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Confirm Logout</h4>
+      </div>
+
+      <div class="modal-body">
+        Do you want to logout?
+      </div>
+
+
+      <div class="modal-footer">
+        <button (click)="logout()" type="button" class="btn btn-primary padding" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-danger padding" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <router-outlet>
     
 </router-outlet>

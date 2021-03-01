@@ -1,0 +1,86 @@
+<!-- <p></p> -->
+<div class="flex h-screen v-screen" id="grad">
+  <div class="card container p-5">
+
+    <div style="margin-top:20px;">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="container activity-tab">
+            <nav class="nav nav-tabs nav-justified">
+              <a class="nav-item nav-link" routerLinkActive="active-link" routerLink="./age-group/physical-computing">
+                <div class="col-md-12 text-center">
+                  <img src="../../assets/15199073.jpg" style="margin: auto" width="60" height="60" />
+                  <h4 style="font-weight:300;font-size:1.2em;padding-top:10px;">
+                    Physical Computing
+                  </h4>
+                </div>
+              </a>
+              <a class="nav-item nav-link" routerLinkActive="active-link" routerLink="./age-group/creative-computing">
+                <div class="col-md-12 text-center">
+                  <img src="../../assets/24252537.jpg" style="margin: auto" width="60" height="60" />
+                  <h4 style="font-weight:300;font-size:1.2em;padding-top:10px;">
+                    Creative Computing
+                  </h4>
+                </div>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row container padding-item">
+      <div style="margin-top:20px;" style="justify-content: center">
+        <!-- <h3 class="text-center subject-text">{{active_subject}}</h3> -->
+      </div>
+
+      <div class="col-md-6 container">
+        <span>
+          <i class='far fa-arrow-alt-circle-left mr-3' style='font-size:24px;color:#a3c739; cursor: pointer;'></i>
+        </span>
+        <label>
+
+          <h3 style="color:#a3c739;font-weight: 300;padding-top:20px;border-bottom: 2px #a3c739 solid;padding-top:8px;">
+            Select Subtopic:
+          </h3>
+        </label>
+        <select class="form-control">
+            <option>
+                No Subtopics Loaded
+            </option>
+          <!-- <option *ngFor="let subtopic of subtopics" value="{{subtopic.id}}">{{subtopic.subtopic_name}}</option> -->
+        </select>
+      </div>
+    </div>
+    <div class="col-md-12" style="margin-top:20px;">
+      <div class="container activity-tab">
+        <nav class="nav nav-tabs nav-justified">
+          <a class="nav-item nav-link" [routerLink]="['./intro']" routerLinkActive="active">Introduction</a>
+          <a class="nav-item nav-link" [routerLink]="['./project']" routerLinkActive="active">Project</a>
+          <a class="nav-item nav-link" [routerLink]="['./code']" routerLinkActive="active">Code</a>
+          <a class="nav-item nav-link" [routerLink]="['./resources']" routerLinkActive="active">Resources</a>
+        </nav>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-12">
+          <div class=" alert alert-warning w-100">
+            <span>Content will soon be available.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="router-outlet-container container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class=" alert alert-warning w-100">
+            <span>Content will soon be available.</span>
+          </div>
+        </div>
+      </div>
+      <!-- <router-outlet>
+        
+          </router-outlet> -->
+
+    </div>
+  </div>
+</div>

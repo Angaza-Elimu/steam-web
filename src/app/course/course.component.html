@@ -1,1 +1,33 @@
-<p>course works!</p>
+<div class="flex h-screen v-screen" id="grad">
+  <div class="card container p-5">
+    <div class="row">
+      <div class="md:text-4xl text-xl font-black uppercase" >Select your Course</div>
+      <div class="text-xl mt-4">Hands on training on Science, Technology, Engineering, Art and
+        Maths based on Creative and Physical computing.</div>
+    </div>
+    <div class="row" style="margin-top: 20vh;height:300px;">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-4 justify-content-center zoom" align="center" (click)="goToTopics(1)">
+            <div class="inner-card">
+                <img src="../../assets/15199073.jpg" width="200" height="200"/>
+            </div>
+            <div class="text-xl mt-4 subject-text">Physical Computing</div>
+        </div>
+        <div class="col-md-4 justify-content-center zoom"  align="center" (click)="goToTopics(2)">
+            <div class="inner-card">
+
+                <img src="../../assets/24252537.jpg" width="200" height="200"/>
+            </div>
+
+            <div class="text-xl mt-4 subject-text">Creative Computing</div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+      
+    </div>
+
+  </div>
+</div>

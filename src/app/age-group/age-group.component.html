@@ -1,1 +1,39 @@
-<p>age-group works!</p>
+<!-- <p></p> -->
+<div class="flex h-screen v-screen" id="grad">
+  <div class="card container p-5">
+    <div class="container container-margin">
+      <div style="margin-top:20px;" class="row text-center" style="justify-content: center">
+        <h3 class="text-center subject-text">{{course_name}}</h3>
+      </div>
+
+    </div>
+    <mat-tab-group (selectedTabChange)="tabClick($event)" mat-stretch-tabs>
+      <mat-tab label="Leonardo">
+        <ng-template matTabContent>
+          <div class="container notes-content" style="margin-top:30px;">
+            <div class="row">
+              <a (click)="goToNotes()" class="col-md-4" *ngFor="let topic of active_content.leonardo_topics">
+                <h3 class="topic-title" style="font-size:1.2em">
+                  {{ topic.topic_name }}
+                </h3>
+              </a>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Archimedes">
+        <ng-template matTabContent>
+          <div class="container notes-content" style="margin-top:30px;">
+            <div class="row">
+              <a class="col-md-4" *ngFor="let topic of active_content.archimedes_topics" (click)="goToNotes()">
+                <h3 class="topic-title" style="font-size:1.2em">
+                  {{ topic.topic_name }}
+                </h3>
+              </a>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

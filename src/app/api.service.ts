@@ -12,48 +12,58 @@ import { ObservableInput } from 'rxjs';
 export class ApiService {
 
 
-  api_url: string;
+  api_url: string = environment.DEV_URL;
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {
-    environment.production == false ? this.api_url == environment.DEV_URL : this.api_url == environment.PROD_URL;
-
   }
 
 
-  login(username, password) {
+  login(formData) {
     let data = {
-      username: username,
-      password: password
+      username: formData.username,
+      password: formData.password
     }
+    console.log(data);
 
+    return this.http.post(this.api_url + '/api/auth/login', data);
+  }
+  
+  // register(form_data) {
+  // }
 
-    return this.http.post(this.api_url + '/api/auth/login', data)
+  getSteamTopics() {
+    return this.http.get(this.api_url + "/api/steamTopics");
+  }
+
+  getTopics(course_id: number, level_id: number) {
+    let data = {
+      course_id: course_id,
+      level_id: level_id
+    };
+    return this.http.post(this.api_url + '/api/steamTopics', data).pipe(retry(1),
+      catchError(this.handleError)
+    );
+  }
+
+  getSubtopics(subtopic_id) {
+    let data = {
+      subtopic_id: subtopic_id
+    }
+    return this.http.post(this.api_url + '/api/steamSubtopics', data)
       .pipe(retry(1),
         catchError(this.handleError)
       );
   }
 
-  register() {
-
-  }
-
-  getSteamTopics(){
-    return this.http.get(this.api_url + "/api/steamTopics");
-  }
-
-  getSteamSubtopics(){
+  getNotes(){
     
   }
 
-  getSubtopics() {
-    return this.http.post(this.api_url + 'api/')
-  }
 
-
-  handleError(error): ObservableInput<any>{
+  handleError(error): ObservableInput<any> {
     let errorMessage = '';
-    
+
     errorMessage = error.error instanceof ErrorEvent ? `Error: ${error.error.message}` : `Error Code: ${error.status}\nMessage: ${error.message}`;
     this.toastr.show(errorMessage);
     return;
