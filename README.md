@@ -1,27 +1,102 @@
-# SteamWeb
+# ANGAZA STEAM WEB PLATFORM
+## A module that leverages the Angaza Science, Tech, Arts and Mathematics content 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+Angaza Steam is a cross-device compatible web platform site used to distribute course content on the Steam topics.
+The product was built in order to leverage widely availble content to enable training for any individual on the STEAM content base.
 
-## Development server
+## Tech
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angaza Steam Module uses a number of open source projects to work properly:
 
-## Code scaffolding
+- [Angular] - HTML enhanced for web apps!
+- [npm] - Used as a package manager
+- [Laravel] - PHP framework used for retrieval and serving of content
+- [Composer] - PHP package manager
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+And of course Angaza Steam itself is open source with a [public repository][AngazaSteam]
+ on GitHub.
+ 
+## Installation
 
-## Build
+Angaza Steam requires [Node.js](https://nodejs.org/) v10+ to run.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Install the dependencies and devDependencies and start the server.
 
-## Running unit tests
+```sh
+git clone https://github.com/Angaza-Elimu/steam-web
+cd steam-web
+npm i
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Verify the server started by navigating to your server address in
+your preferred browser.
 
-## Running end-to-end tests
+```sh
+http://localhost:4200
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+For production environments...
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```sh
+ng build
+cd dist
+```
+
+to access the production build
+
+```sh
+ng build
+cd dist
+```
+
+this will take you to the directory in which the production files have been generated.
+
+
+## Development
+
+Want to contribute? Great!
+
+For a great place to start visit our repositories and have a look at the feature requests and the issues.
+
+Fork and create a branch on the feature/issue you will be working on.
+
+Create a pull request... we will review and be in contact.
+
+For other clarifications you can contact info@angazaelimu.com
+
+Angaza Steam uses Webpack for fast developing.
+Make a change in your file and instantaneously see your updates in the browser!
+
+
+#### Building for source
+
+For production release:
+
+```sh
+ng build --prod
+```
+
+
+
+
+
+> Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+
+
+
+## License
+
+LGPL 3.0
+
+**Happy Learning**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+
+   [Composer]: <https://getcomposer.org>
+   [Angular]: <https://angular.io>
+   [Laravel]: <https://laravel.com/>
+   [npm]: <https://https://www.npmjs.com/>
+   [AngazaSteam]: <https://github.com/Angaza-Elimu/steam-web>
