@@ -243,7 +243,7 @@ Simple request to retrive topics for our curriculum
 This is a sample topic response
 
 ###### Subtopics
----
+--- 
 Subtopic Request includes a call to the API with a `topic_id` parameter
 ```js
 getSubtopics(topic_id) {
