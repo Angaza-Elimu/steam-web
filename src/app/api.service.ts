@@ -28,6 +28,19 @@ export class ApiService {
 
     return this.http.post(this.api_url + '/api/auth/login', data);
   }
+
+
+  register(formData){
+    let data = {
+      username: formData.username,
+      password: formData.password,
+      first_name: formData.first_name,
+      last_name: formData.last_name,
+      phone: formData.phone
+    }
+
+    return this.http.post(this.api_url + '/api/auth/signup', data);
+  }
   
   // register(form_data) {
   // }

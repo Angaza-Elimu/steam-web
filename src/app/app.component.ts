@@ -37,59 +37,21 @@ export class AppComponent {
     public router: Router,
     private toastr: ToastrService
   ) {
+    this.currentUser = localStorage.getItem("user_pk");
+    this.username = localStorage.getItem("angaza_user");
+    this.user_type = localStorage.getItem("user_type");
 
-    // this.router.navigate(['login']);
-    // this.currentUser = localStorage.getItem("user_pk");
-    // this.username = localStorage.getItem("angaza_user");
-    // this.user_type = localStorage.getItem("user_type");
-    // console.log(this.currentUser);
-    // console.log(this.username);
-    // this.currentUser && this.username
-    //   ? this.goToNotes()
-    //   : this.setFalseLoginStatus();
-    // if (this.currentUser && this.username && this.user_type == "student") {
-    //   this.learnButtonClicked();
-    // } else if (
-    //   this.currentUser &&
-    //   this.username &&
-    //   this.user_type == "teacher"
-    // ) {
-    //   this.goToTeacherDashboard();
-    // } else if (
-    //   this.currentUser &&
-    //   this.username &&
-    //   this.user_type == "admin"
-    // ) {
-    //   this.goToTeacherDashboard();
-    // }else {
-    //   this.setFalseLoginStatus();
-    // }
-    // this.router.events.subscribe(event => {
-    //   if(event instanceof NavigationEnd){
-    //       gtag('config', 'G-LXP457QZJD', 
-    //             {
-    //               'page_path': event.urlAfterRedirects
-    //             }
-    //            );
-    //    }
-    // }
-//  )
-
-    // const username = new FormControl("", Validators.required);
-    // const password = new FormControl("", Validators.required);
-
-
-    // this.login_form = new FormGroup({
-    //   username: username,
-    //   password: password
-    // });
+    this.currentUser && this.username
+      ? this.goToNotes()
+      : this.setFalseLoginStatus();
+   
   }
 
   goToNotes() {
     // this.spinner.show();
     this.login_status = true;
     console.log("clicked");
-    this.router.navigate(["notes/math"]);
+    this.router.navigate(["course"]);
   }
   responsiveMenu(){
     if(this.menu_overlay == false){

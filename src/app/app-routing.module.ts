@@ -10,13 +10,18 @@ import { ContentComponent } from './content/content.component';
 import { CodeComponent } from './code/code.component';
 import { ProjectComponent } from './project/project.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
    
       {
         path: 'login',
-        component: LoginComponent,
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: SignupComponent
       },
       {
         path: 'course',
