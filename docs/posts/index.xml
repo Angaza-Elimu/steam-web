@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angaza Steam</title>
-    <link>http://example.org/posts/</link>
+    <link>https://angaza-elimu.github.io/steam-web/posts/</link>
     <description></description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://angaza-elimu.github.io/steam-web/posts/index.xml" rel="self" type="application/rss+xml" />
       <item>
         <title></title>
-        <link>http://example.org/posts/syntax/</link>
+        <link>https://angaza-elimu.github.io/steam-web/posts/syntax/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://example.org/posts/syntax/</guid>
+        <guid>https://angaza-elimu.github.io/steam-web/posts/syntax/</guid>
         <description>Syntax This explains the different components included in the steam web application and the functions there in.
  All component code is written in the path /src/app folder
   All assets are stored in the path /src/assets folder
@@ -22,10 +22,10 @@
     
       <item>
         <title>Getting Started</title>
-        <link>http://example.org/posts/my-first-post/</link>
+        <link>https://angaza-elimu.github.io/steam-web/posts/my-first-post/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://example.org/posts/my-first-post/</guid>
+        <guid>https://angaza-elimu.github.io/steam-web/posts/my-first-post/</guid>
         <description>ANGAZA STEAM PLATFORM  A module that leverages the Angaza Science, Tech, Arts and Mathematics content Angaza Steam is a cross-device compatible web platform site used to distribute course content on the Steam topics.
  Tech Angaza Steam Module uses a number of open source projects to work properly:
  Angular - HTML enhanced for web apps! npm - Used as a package manager Laravel - PHP framework used for retrieval and serving of content Composer - PHP package manager  And of course Angaza Steam itself is open source with a public repository on GitHub.</description>
