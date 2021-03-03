@@ -15,7 +15,7 @@
         <i class="fa fa-bars" aria-hidden="true" style="color:white;padding:20px;"></i>
         </button>
       <ul id="menu">
-        <li *ngIf="user_type == null || user_type == ''"><a  href="home" style="cursor: pointer;">Home</a></li>
+        <!-- <li *ngIf="user_type == null || user_type == ''"><a  href="home" style="cursor: pointer;">Home</a></li> -->
 
         <!-- <li *ngIf="user_type && user_type ==='admin'"><a  (click)="navigateUser('teacher')" style="cursor: pointer;">Admin Dashboard</a></li>
         <li *ngIf="user_type && user_type ==='teacher'"><a  (click)="navigateUser('teacher')" style="cursor: pointer;">Teacher Dashboard</a></li>
@@ -24,10 +24,10 @@
         <li *ngIf="user_type"><a (click)="revisionButtonClicked()" style="cursor: pointer;">Revision</a></li>
         <li><a (click)="steamButtonClicked()" *ngIf="user_type && user_type === 'student'" style="cursor:pointer">Steam</a></li>
         <li *ngIf="user_type && user_type === 'student'"><a (click)="goToAnalytics()" style="cursor: pointer;">Analytics</a></li> -->
-        <li style="cursor: pointer;" (click)='goToAbout()'><a >About Us</a></li>
+        <!-- <li style="cursor: pointer;" (click)='goToAbout()'><a >About Us</a></li> -->
         <!-- <li><a routerLink="blog">Blog</a></li> -->
-        <li><a routerLink="help">Help</a></li>
-        <li
+        <!-- <li><a routerLink="help">Help</a></li> -->
+        <!-- <li
 
   *ngIf="login_status == false"style="background-color:#27AE60;border-radius:40px;cursor:pointer">
       <a (click)="signInToggle()" style="height:58px;">Sign In</a>
@@ -36,7 +36,7 @@
 
   *ngIf="login_status == false"style="margin-left:20px;background-color:#27AE60;border-radius:40px;cursor:pointer">
       <a (click)="goToSignupPage()" style="height:58px;">Register</a>
-    </li>
+    </li> -->
     <li *ngIf="login_status == true" style="cursor: pointer;" (click)="openProfilePage()">
     <p style="color:white">
       <i style="color:white" class="fa fa-user-o" aria-hidden="true"></i>&nbsp;&nbsp;{{username}}</p>

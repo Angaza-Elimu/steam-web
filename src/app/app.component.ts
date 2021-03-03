@@ -38,7 +38,7 @@ export class AppComponent {
     private toastr: ToastrService
   ) {
 
-    // this.router.navigate(['login']);
+    this.router.navigate(['login']);
     // this.currentUser = localStorage.getItem("user_pk");
     // this.username = localStorage.getItem("angaza_user");
     // this.user_type = localStorage.getItem("user_type");
