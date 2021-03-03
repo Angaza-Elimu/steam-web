@@ -311,7 +311,7 @@ class ApiService {
     constructor(http, toastr) {
         this.http = http;
         this.toastr = toastr;
-        this.api_url = _environment__WEBPACK_IMPORTED_MODULE_1__["environment"].DEV_URL;
+        this.api_url = _environment__WEBPACK_IMPORTED_MODULE_1__["environment"].PROD_URL;
     }
     login(formData) {
         let data = {

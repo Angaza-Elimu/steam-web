@@ -499,7 +499,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.http = http;
         this.toastr = toastr;
-        this.api_url = _environment__WEBPACK_IMPORTED_MODULE_1__["environment"].DEV_URL;
+        this.api_url = _environment__WEBPACK_IMPORTED_MODULE_1__["environment"].PROD_URL;
       }
 
       _createClass(ApiService, [{

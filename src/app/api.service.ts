@@ -12,7 +12,7 @@ import { ObservableInput } from 'rxjs';
 export class ApiService {
 
 
-  api_url: string = environment.DEV_URL;
+  api_url: string = environment.PROD_URL;
 
 
   constructor(private http: HttpClient, private toastr: ToastrService) {
